@@ -4,6 +4,8 @@ LABEL maintainer="0nam"
 
 ENV PYTHONUNBUFFERED 1
 
+RUN apk add --no-cache gcc musl-dev
+
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./requirements.dev.txt /tmp/requirements.dev.txt
 COPY /app /app
